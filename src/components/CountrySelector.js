@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
-import Chart from './Chart' 
+import Chart from './Chart';
+import DisplayStats from './DisplayStats';
 
 function CountrySelector({countries}) {
     const [country,setCountry]=useState('World');
@@ -7,7 +8,7 @@ function CountrySelector({countries}) {
     return (
     <>
     <p>{country}</p>
-      <select onChange={e=>setCountry(e.currentTarget.value)}>
+      <select onChange={e=>setCountry(e.currentTarget.value)} className="dropbtn">
         {countries.map(item => (
           <option
             key={item}
@@ -18,7 +19,7 @@ function CountrySelector({countries}) {
         ))}
       </select>
         <h1>{country}</h1>
-        
+    <DisplayStats country={country}/>
       <Chart country={country}/>
       </>
     );
