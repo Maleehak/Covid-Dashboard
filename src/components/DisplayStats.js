@@ -57,11 +57,11 @@ const FetchTotalData =({country}) => {
           </CardContent>
           </Card>
 
-        
+          
         </Grid>
         <Grid item xs={12} md={3} >
         <Card  className={classes.card}>
-        <CardContent borderBottom={1} className={classes.root}>
+                    <CardContent borderBottom={1} className={classes.root}>
             <Typography color="textSecondary"  variant="h4" gutterBottom>
               Deaths
             </Typography>
@@ -71,8 +71,8 @@ const FetchTotalData =({country}) => {
             <Typography variant="body1" component="p">
               Number of deaths in COVID-19.
             </Typography>
-          </CardContent>
-          </Card>
+          </CardContent>  
+            </Card>
 
         </Grid>
         </Grid>
