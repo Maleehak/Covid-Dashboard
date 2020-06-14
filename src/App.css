@@ -5,8 +5,9 @@
   box-sizing: border-box;
 }
 
+
 body {
-  background-color: #f7f7f7;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +17,7 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-.container {
+.containered {
   margin: 30px auto;
   width: 350px;
 }
@@ -27,33 +28,47 @@ body {
   padding: 40px;
   display: flex;
   justify-content:space-between;
+  flex-direction: column;
+  margin: 50px ;
+}
+
+.section {
+  background-image: linear-gradient(#f0fcfc,#d7fdfd);
+  box-shadow: var(--box-shadow);
+  padding: 60px;
+  width: 80%;
+  border: 5px dotted cornflowerblue;
+  border-radius: 1px;
+  display: flex;
+  justify-content:space-between;
   flex-direction: rows;
-  margin: 20px ;
+  margin: 50px ;
 }
 
 
 
 .plus {
-  color: blue ;
+  color: #077b9b ;
   font-size: 20px;
   letter-spacing: 1px;
 }
 
 .minus {
-  color: #c0392b;
+  color: #72050a;
   font-size: 20px;
   letter-spacing: 1px;
 }
 .ok{
-  color: #2ecc71;
+  color: #335e3e;
   font-size: 20px;
   letter-spacing: 1px;
 }
 .dropbtn {
   background-color: lightblue;
   color: white;
-  padding: 16px;
+  padding: 21px;
   font-size: 16px;
+  width: 70%;
   border: none;
   cursor: pointer;
 }
