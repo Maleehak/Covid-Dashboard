@@ -1,22 +1,20 @@
 import React, { useState,useEffect } from 'react';
-import {Bar} from 'react-chartjs-2';
+import {Pie} from 'react-chartjs-2';
 import  {getCountryData} from './Api';
 
-const Chart = (country) => {
+const PieChart = (country) => {
     const [chartData,setChartData]=useState({});
 
     const setData=(responseData)=>{        
-        let confirmed=parseInt(responseData.totalCases.split(',').join(""),10);
         let death=parseInt(responseData.totalDeath.split(',').join(""),10);
         let recovered=parseInt(responseData.recovered.split(',').join(""),10);
         setChartData({
-            labels:['Total cases','Recovered','Death'],
+            labels:['Recovered','Death'],
             datasets:[
                 {
-                    labels:['Confirmed','Recovered','Deaths'],
-                    data:[confirmed,recovered,death],
+                    labels:['Recovered','Deaths'],
+                    data:[recovered,death],
                     backgroundColor:[
-                        '#8bbcc9',
                         '#42f593',
                         '#f54b42'
                     ],
@@ -39,7 +37,7 @@ const Chart = (country) => {
     return (
     <>
             <div>
-                <Bar data={chartData}  options={{
+                <Pie data={chartData}             options={{
                 title: {
                     display: true,
                     fontSize: 25
@@ -53,4 +51,4 @@ const Chart = (country) => {
               
     )
 }
-export default Chart;
+export default PieChart;
